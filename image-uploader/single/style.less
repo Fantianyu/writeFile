@@ -1,0 +1,116 @@
+//共同上传组件外面div的样式
+.common-style{
+  width: 70px;
+  height: 34px;
+  line-height: 34px;
+  border-radius: 2px;
+  text-align: center;
+  font-weight: 500;
+}
+
+//共同预览的样式
+.common-preview-style{
+  .cms-single-uploader-preview{
+    width: 176px;
+    height: 97px;
+    box-sizing: border-box;
+    border: 1px solid #DADADA;
+    &>div{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      &>p{
+        text-align: center;
+      }
+      &>img{
+        max-width: 100%;
+        max-height:100%;
+      }
+    }
+  }
+}
+
+//共同上传组件的样式
+.common-rc-uploader{
+  .rc-upload{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    font-weight: 500;
+    transition:all .2s linear
+  }
+}
+
+//隐藏状态
+.cms-hide-block{
+  display: none!important;
+}
+
+.cms-single-uploader-horizontal{
+}
+
+//外部容器类名和里面稍微不一样是用于切换两种不同的布局
+.cms-single-uploader-horizontal,.cms-single-uploader-vertical{
+  flex-wrap: wrap;
+  .common-preview-style;
+  .cms-single-uploader-uploaderbutton{
+    display: flex;
+    justify-content: space-between;
+    &-pictures{
+      .common-style;
+      display: inline-block;
+      cursor: pointer;
+    }
+  }
+
+  .ant-btn-primary{
+    padding: 0;
+  }
+
+  .btn-picture-choose{
+    padding: 4px 20px 5px 20px;
+  }
+  .rc-upload{
+    padding: 4px 20px 5px 20px;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.cms-single-uploader-horizontal{
+  display: flex;
+  .common-preview-style;
+  .cms-single-uploader-uploaderbutton{
+    margin-left: 11px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    &-pictures{
+      .common-style;
+      cursor: pointer;
+    }
+  }
+}
+
+.cms-single-uploader-vertical{
+  .cms-single-uploader-preview{
+    margin: auto;
+  }
+
+  .cms-single-uploader-uploaderbutton{
+    width: 100%;
+    margin:16px auto;
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .cms-fe-uploader{
+    margin: 5px;
+  }
+}
